@@ -1,0 +1,82 @@
+$react-rte-ui-options: () !default;
+
+.react-rte {
+  $root: &;
+  &__toolbar {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -1px;
+  }
+
+  &__button-group {
+    display: inline-block;
+    margin-right: 10px;
+    #{$root}__button {
+      margin-left: -1px;
+    }
+
+    > #{$root}__button:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    > #{$root}__button:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    > #{$root}__button:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 3px 8px;
+    min-width: 30px;
+    height: 30px;
+    line-height: 22px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #fdfdfd 0, #f6f7f8);
+    border: 1px solid #999;
+    border-radius: 2px;
+    color: #333;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    vertical-align: middle;
+
+    > * {
+      pointer-events: none;
+    }
+
+    &[data-format="strikethrough"] {
+      text-decoration: line-through;
+    }
+
+    &[data-format="underline"] {
+      text-decoration: underline;
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      > * {
+        opacity: 0.5;
+      }
+    }
+
+    &.is-active,
+    &:hover {
+      background: none #d8d8d8;
+    }
+  }
+}
