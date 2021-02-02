@@ -94,7 +94,7 @@
     "classnames": "^2.2.6"
   },
   "publishConfig": {
-    "access": "<%= registry.access %>",
-    "registry": "<%= registry.publish %>"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
